@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给最爱的你</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9e3e3;
+            color: #d14d72;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #d14d72;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #b93a5e;
+        }
+    </style>
+</head>
+<body>
+    <h1>亲爱的，我有一些话想对你说：</h1>
+    <p id="message">点击下面的按钮查看甜蜜消息！</p >
+    <button onclick="showMessage()">点我查看惊喜</button>
+
+    <script>
+        const messages = [
+            "你是我的阳光，照亮了我的每一天。",
+            "和你在一起的每一秒都是我的幸福时光。",
+            "你是我生命中最美好的意外。",
+            "我爱你，比昨天更多，但不及明天。",
+            "你是我心中的唯一，永远都是。",
+            "和你在一起，世界都变得美好。",
+            "你是我梦寐以求的一切。",
+            "我想和你一起走过每一个春夏秋冬。",
+            "你是我心中的小公主，永远都是。",
+            "我爱你，直到永远。"
+        ];
+
+        const surprises = [
+            "今晚我请你吃你最爱的美食！",
+            "周末我们一起去旅行吧！",
+            "我给你准备了一个小礼物，猜猜是什么？",
+            "我们一起看一场浪漫的电影吧！",
+            "我给你写了一首诗，想听吗？",
+            "我给你准备了一个惊喜派对！",
+            "我们一起去做一些有趣的事情吧！",
+            "我给你准备了一个浪漫的晚餐！",
+            "我们一起去看星星吧！",
+            "我给你准备了一个特别的惊喜！"
+        ];
+
+        function showMessage() {
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
+            document.getElementById("message").innerHTML = `${randomMessage}<br><br>还有一个小惊喜：${randomSurprise}`;
+        }
+    </script>
+</body>
+</html>
